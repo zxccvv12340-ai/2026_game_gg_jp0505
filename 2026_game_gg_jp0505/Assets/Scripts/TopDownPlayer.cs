@@ -28,7 +28,7 @@ public class TopDownPlayer : MonoBehaviour
     }
     void Update()
     {
-        if (dialogueBox.isOpen) { moveInput = Vector2.zero; }
+        if (dialogueBox != null && dialogueBox.isOpen) { moveInput = Vector2.zero; }
         rb.linearVelocity = moveInput * moveSpeed;
         if (facingDir.y > 0) { currentSprites = upSprites; }
         else if (facingDir.y < 0) { currentSprites = downSprites; }
